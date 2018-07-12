@@ -5,13 +5,11 @@ Document version: 1.0 (July 2018)
 
 Gemalto Digital Banking Mobile Suite delivers strong multi-factor authentication – including biometrics – with best-in-class security, while fulfilling banking requirements. It ensures appropriate security features, while also allowing banks to comply with regulations and to offer simple, innovative experiences that increase the digital touchpoints in online channels. Gemalto Digital Banking Mobile Suite is developed and maintained by Gemalto with banking-grade security vetted by internal and external audits.
 
-Backed up by an R&D team of 50+ engineers (developers, architects, testers, and security officers) who are highly skilled in mobile security, cryptography and biometric authentication, the Gemalto Digital Banking Mobile Suite benefits from a strong product development plan. It is the guarantee of a product offering which not only remains always up to date with the latest mobile evolutions and threats, but also strives to incorporate the latest innovations to deliver banks and their users with the strongest security and a smooth user experience.
+Backed up by a large R&D team of engineers (developers, architects, testers, and security officers) who are highly skilled in mobile security, cryptography and biometric authentication, the Gemalto Digital Banking Mobile Suite benefits from a strong product development plan. It is the guarantee of a product offering which not only remains always up to date with the latest mobile evolutions and threats, but also strives to incorporate the latest innovations to deliver banks and their users with the strongest security and a smooth user experience.
 
 These solutions are now integrated into ForgeRock Identity Platform using the **modules and chains technology** from ForgeRock **Access Management**.
 
-
 ![ForgeRock Gemalto integration](/images/gto_overview.png)
-
 
 ## Pre-requisites
 
@@ -78,7 +76,11 @@ The Authentication Module that was automatically created requires some changes t
     + Create account if it does not exist ```"checked"```
     + Account Mapper Configuration: Remove existing entry, add ```"preferred_username=uid"```
     + Attribute Mapper Configuration: Modify entry to look like this:
-        + ```"given_name=givenName preferred_username=uid family_name=sn name=cn email=mail"``` (only the uid entry is modified)
+        + ```"given_name=givenName```
+        + ```preferred_username=uid``` (only the uid entry is modified)
+        + ```family_name=sn```
+        + ```name=cn```
+        + ```email=mail"```
 1. Click **"Save Changes"**    
 
 
